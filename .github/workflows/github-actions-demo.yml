@@ -19,4 +19,5 @@ jobs:
           ls -a ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Test Yamllint command
-        run: yamllint ${{ github.workspace }}/yaml-validate.yml
+        run: |
+          yamllint ${{ github.workspace }}/yaml-validate.yml
